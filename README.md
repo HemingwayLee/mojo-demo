@@ -21,10 +21,11 @@ where CashierId = 'd89c8029-4808-4cea-b505-efd8279dc66d'
 ```
 
 The above SQL scripts can have different execution plan
-|---|
+
+| possible execution plan 1 |
 | ![image](https://github.com/HemingwayLee/mojo-demo/assets/8428372/2c4600fd-9b65-46d5-8f04-26044fddadd4) |
-|---|
+| possible execution plan 2 |
 | ![image](https://github.com/HemingwayLee/mojo-demo/assets/8428372/57268c5b-1dce-4d47-b7b7-2e9f2415e9c4) |
-|---|
+| |
 
 

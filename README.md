@@ -34,4 +34,25 @@ a = "aaa"
 ```
 
 * [list](https://github.com/python/cpython/blob/5c22476c01622f11b7745ee693f8b296a9d6a761/Include/listobject.h#L22) is slow
+  * NumPy arrays are significantly faster than Python lists for several reasons:
 
+1. Memory layout:
+
+Numpy arrays: Stored contiguously in memory, meaning all elements of the same data type are stored together. This allows for faster access and manipulation as the CPU can read large chunks of data efficiently.
+Python lists: Heterogeneous in memory, meaning elements can be of different data types and stored scattered across memory. This makes accessing and manipulating elements slower as the CPU needs to jump around memory to find the required data.
+2. Data type:
+
+Numpy arrays: Homogeneous, meaning all elements are of the same data type (e.g., all integers or all floats). This allows for optimized operations and efficient use of memory.
+Python lists: Heterogeneous, meaning different elements can have different data types. This requires more overhead for storing and manipulating data.
+3. Operations:
+
+Numpy arrays: Optimized C code for vectorized operations, meaning operations are applied to entire arrays simultaneously. This is significantly faster than looping over individual elements in a list.
+Python lists: Interpreted Python code for operations, meaning each operation is executed individually. This is slower and less efficient.
+4. Built-in functions:
+
+Numpy arrays: Have a vast library of optimized functions for various mathematical, statistical, and linear algebra operations. These functions take advantage of the underlying C code and contiguously stored data for maximum performance.
+Python lists: Lack dedicated functions for complex operations. These operations need to be implemented using loops, leading to slower execution.
+5. Parallelism:
+
+Numpy arrays: Can leverage multi-core processors for parallel execution of operations. This further improves performance for large datasets.
+Python lists: Primarily single-threaded, limiting the potential for performance improvement on modern hardware.

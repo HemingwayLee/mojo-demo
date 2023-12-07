@@ -26,5 +26,12 @@ where CashierId = 'd89c8029-4808-4cea-b505-efd8279dc66d'
 | ![image](https://github.com/HemingwayLee/mojo-demo/assets/8428372/2c4600fd-9b65-46d5-8f04-26044fddadd4) |
 | ![image](https://github.com/HemingwayLee/mojo-demo/assets/8428372/57268c5b-1dce-4d47-b7b7-2e9f2415e9c4) |
 
+## Which parts of python is slow for example?
+* python3 is dynamic type
+```
+a = 30
+a = "aaa"
+```
 
+* [list](https://github.com/python/cpython/blob/5c22476c01622f11b7745ee693f8b296a9d6a761/Include/listobject.h#L22) is slow
 

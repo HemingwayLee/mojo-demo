@@ -50,3 +50,4 @@ a = "aaa"
     6. Parallelism:
       * Numpy arrays: Can leverage multi-core processors for parallel execution of operations. This further improves performance for large datasets.
       * Python lists: Primarily single-threaded, limiting the potential for performance improvement on modern hardware.
+

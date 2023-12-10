@@ -104,3 +104,36 @@ a = "aaa"
 * in real world
 
 ![image](https://github.com/HemingwayLee/mojo-demo/assets/8428372/44e3d2be-ed1c-4434-be96-7c76f1b34628)
+
+## C++
+* It allows us to use Single Instruction Multiple Data (SIMD) instruction. Each instruction can perform the same type of operations on multiple samples.
+  * Arm neon instruction set (e.g., `float32x4_t`, `vld1q_f32`, `vaddq_f32`, ...)
+ 
+```cpp
+  // Load input and weight tensors
+  float32x4_t in[4];
+  float32x4_t wt[4];
+  for (int i = 0; i < 4; ++i) {
+    in[i] = vld1q_f32(input);
+    wt[i] = vld1q_f32(weight);
+  }
+
+  // Perform the convolution
+  float32x4_t acc = vdupq_n_f32(0.0f);
+  for (int k = 0; k < kernel_size; ++k) {
+    for (int c = 0; c < input_channels; ++c) {
+      float32x4_t in_c = vld1q_f32(input + c * input_channels * kernel_size);
+      float32x4_t wt_c = vld1q_f32(weight + c * output_channels * kernel_size);
+      acc = vmlaq_f32(acc, in_c, wt_c);
+    }
+    input += stride;
+    weight += stride;
+  }
+
+  // Add bias and store output
+  acc = vaddq_f32(acc, vld1q_f32(bias));
+  vst1q_f32(output, acc);
+```
+
+![cpu_memory](https://github.com/HemingwayLee/mojo-demo/assets/8428372/33381038-da80-48a7-b6a0-ae3b22b7b969)
+

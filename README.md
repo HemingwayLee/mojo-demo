@@ -93,3 +93,7 @@ a = "aaa"
 
 ## Mojo vs Cython
 * Both Cython and Mojo are language extensions for Python, designed to improve performance and efficiency.
+
+* Parallelism
+![image](https://github.com/HemingwayLee/mojo-demo/assets/8428372/778bfded-6f41-47c6-b2fb-c1b75950f11d)
+

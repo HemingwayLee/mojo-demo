@@ -27,6 +27,46 @@ where CashierId = 'd89c8029-4808-4cea-b505-efd8279dc66d'
 | ![image](https://github.com/HemingwayLee/mojo-demo/assets/8428372/57268c5b-1dce-4d47-b7b7-2e9f2415e9c4) |
 
 ## Which parts of python is slow for example?
+* Python is easy to use
+```python
+a = "hello"
+b = "world"
+c = a + b
+```
+
+Equivalent C code
+
+```c
+#include <stdio.h>
+
+int main() {
+  // Define the two strings
+  char a[] = "hello";
+  char b[] = "world";
+
+  // Calculate the combined string length
+  int combinedLength = strlen(a) + strlen(b) + 1; // Add 1 for null terminator
+
+  // Allocate memory for the combined string
+  char c[combinedLength];
+
+  // Manually copy each character
+  for (int i = 0; i < strlen(a); i++) {
+    c[i] = a[i];
+  }
+
+  // Append the second string after the first
+  for (int i = strlen(a), j = 0; i < combinedLength; i++, j++) {
+    c[i] = b[j];
+  }
+
+  // Add the null terminator
+  c[combinedLength - 1] = '\0';
+
+  return 0;
+}
+```
+
 * python3 is dynamic type
 ```
 a = 30
@@ -51,3 +91,5 @@ a = "aaa"
       * Numpy arrays: Can leverage multi-core processors for parallel execution of operations. This further improves performance for large datasets.
       * Python lists: Primarily single-threaded, limiting the potential for performance improvement on modern hardware.
 
+## Mojo vs Cython
+* Both Cython and Mojo are language extensions for Python, designed to improve performance and efficiency.

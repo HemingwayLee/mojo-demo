@@ -95,5 +95,9 @@ a = "aaa"
 * Both Cython and Mojo are language extensions for Python, designed to improve performance and efficiency.
 
 * Parallelism
+
 ![image](https://github.com/HemingwayLee/mojo-demo/assets/8428372/778bfded-6f41-47c6-b2fb-c1b75950f11d)
 
+* in real world
+
+![image](https://github.com/HemingwayLee/mojo-demo/assets/8428372/44e3d2be-ed1c-4434-be96-7c76f1b34628)

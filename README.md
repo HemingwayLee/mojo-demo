@@ -91,7 +91,10 @@ a = "aaa"
       * Numpy arrays: Can leverage multi-core processors for parallel execution of operations. This further improves performance for large datasets.
       * Python lists: Primarily single-threaded, limiting the potential for performance improvement on modern hardware.
 
-## Mojo vs Cython
+## Mojo 
+* Mojo is not the only solution, NumBa, Cython, Julia, ... can also do the similar things
+
+### Mojo vs Cython
 * Both Cython and Mojo are language extensions for Python, designed to improve performance and efficiency.
 
 * Parallelism

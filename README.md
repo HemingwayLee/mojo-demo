@@ -67,7 +67,7 @@ int main() {
 }
 ```
 
-* python3 is dynamic type
+* python3 is dynamic type. Python does type check and memory allocate at runtime
 ```
 a = 30
 a = "aaa"
@@ -94,6 +94,16 @@ a = "aaa"
 ## Mojo 
 * Mojo is not the only solution, NumBa, Cython, Julia, ... can also do the similar things
 * Mojo combines the `usability of Python` with the `performance of C`, unlocking unparalleled programmability of AI hardware and extensibility of AI models.
+
+## How to improve python runtime performance
+* static type
+* Parallelism
+* Use instruction set provided by specific hardware
+* Compiler optimizations
+  * loop unrolling
+ 
+![loop_unrolling](https://github.com/HemingwayLee/mojo-demo/assets/8428372/804f4eef-a8ee-474a-80ab-3ef4d69b83c5)
+
 
 ### Mojo vs Cython
 * Both Cython and Mojo are language extensions for Python, designed to improve performance and efficiency.

@@ -10,7 +10,8 @@ RUN apt-get update \
     software-properties-common \
     build-essential \
     curl \
-    vim 
+    vim \
+    python3-opencv
 
 RUN curl https://get.modular.com | MODULAR_AUTH=$AUTH_KEY sh -
 RUN modular auth $AUTH_KEY

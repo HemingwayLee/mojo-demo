@@ -151,3 +151,6 @@ a = "aaa"
 ![cpu_memory](https://github.com/HemingwayLee/mojo-demo/assets/8428372/33381038-da80-48a7-b6a0-ae3b22b7b969)
 ![image](https://github.com/HemingwayLee/mojo-demo/assets/8428372/c718c26b-d370-4f2e-8650-3dcf51603daf)
 
+# Key takeaway
+* Use `numpy`, `tensorflow`, `pytorch` provided data structure and operation if possible. Parallelism is implemented there
+* Keep eyes on mojo and use C\C++ for our inference server

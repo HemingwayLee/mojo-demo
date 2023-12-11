@@ -93,6 +93,7 @@ a = "aaa"
 
 ## Mojo 
 * Mojo is not the only solution, NumBa, Cython, Julia, ... can also do the similar things
+* Mojo combines the `usability of Python` with the `performance of C`, unlocking unparalleled programmability of AI hardware and extensibility of AI models.
 
 ### Mojo vs Cython
 * Both Cython and Mojo are language extensions for Python, designed to improve performance and efficiency.

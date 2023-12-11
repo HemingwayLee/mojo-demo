@@ -97,8 +97,10 @@ a = "aaa"
 
 ## How to improve python runtime performance
 * static type
+  * `ComplexFloat64` in [mojo example](https://www.modular.com/blog/how-mojo-gets-a-35-000x-speedup-over-python-part-1)
 * Parallelism
 * Use instruction set provided by specific hardware
+  * Squared addition is a common operation, and the Mojo standard library provides a special function for it called `squared_add`, which is implemented using `FMA instructions` for maximum performance
 * Compiler optimizations
   * loop unrolling
  
